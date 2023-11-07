@@ -25,5 +25,5 @@ Welcome to Atrons Book Store, an online platform for browsing and purchasing boo
 
 ## Contributors
 
-[Admas Terefe](https://github.com/Son-OfAnton) and [Imran Mohammed](https://github.com/actuponit)
+[Faysal Mohammed](https://github.com/adnan4k),[Admas Terefe](https://github.com/Son-OfAnton) and [Imran Mohammed](https://github.com/actuponit)
 
