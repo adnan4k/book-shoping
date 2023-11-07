@@ -1,0 +1,450 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla";
+}
+
+:root {
+  --main-color: #ea1538;
+}
+
+body {
+  position: relative;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.nav-icons {
+  display: flex;
+  /* border: 1px solid red; */
+  /* margin: 10px 10px 10px; */
+  margin: 3vh 5vw 0 5vw;
+  padding-left: 10vw;
+  column-gap: 3vw;
+  justify-content: end;
+}
+
+.nav-svgs {
+  width: 40px;
+  height: 40px;
+}
+
+.svgs {
+  width: 24px;
+  height: 24px;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  column-gap: 40px;
+  margin-bottom: 40px;
+  /* justify-content: space-between; */
+}
+
+.logo-title {
+  display: inline-flex;
+}
+
+.logo {
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.title {
+  color: var(--main-color);
+  font-size: 35px;
+  margin-top: 5px;
+}
+
+.nav-list {
+  display: inline-flex;
+  justify-content: space-between;
+  gap: 90px;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav ul li a:hover {
+  color: var(--main-color);
+  transition: 0.3s;
+}
+
+/* drop mega menu */
+
+.mega-menu {
+  position: absolute;
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  border: 1px solid black;
+  max-width: 500px;
+  margin-left: 300px;
+  background-color: white;
+  z-index: 1;
+}
+
+.drop-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding: 10px;
+}
+
+.mega-menu ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.mega-menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.mega-menu ul li:hover a,
+.mega-menu ul li:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+/* search related */
+
+.search-btn {
+  border: none;
+  background: var(--main-color);
+  padding: 12px 20px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.search-bar {
+  font-size: medium;
+  outline: none;
+  color: #686868;
+  border: 1px solid rgb(197, 191, 191);
+  padding: 12px 20px;
+  border-radius: 30px;
+  width: 350px;
+}
+
+@media (max-width: 904px) {
+  .search-bar {
+    width: 250px;
+  }
+
+  .nav-list {
+    /* gap: 40px; */
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 728px) {
+  .top-nav {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .search-bar {
+    width: 50%;
+  }
+
+  .nav-list {
+    /* gap: 30px; */
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 412px) {
+  .search-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    row-gap: 10px;
+  }
+  .search-bar {
+    width: 100%;
+  }
+  .search-btn {
+    width: 30%;
+    margin: 0 auto;
+  }
+
+  .nav-list {
+    /* gap: 20px; */
+    overflow-x: scroll;
+  }
+}
+
+/* Featuted books */
+
+.featured-books {
+  display: flex;
+  /* border: 1px solid red; */
+  margin: 8vh 5vw;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* padding: 5vh 5vw; */
+}
+
+.featured-books > h1 {
+  font-size: xx-large;
+  padding-top: 17vh;
+  padding-left: 3vw;
+}
+
+#month {
+  font-size: xx-large;
+  font-weight: 800;
+}
+
+/* slider */
+
+#slider {
+  overflow: hidden;
+  max-width: 200px;
+  max-height: 100%;
+}
+
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 15s slider infinite;
+}
+
+#slider figure img {
+  float: left;
+  width: 20%;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+}
+
+/* best selling boooks */
+.bestselling-books {
+  margin-top: 8vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  /* border: 1px solid red; */
+}
+
+.bestselling-books h1 {
+  font-size: xx-large;
+  margin-bottom: 20px;
+}
+
+/* .card-container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
+} */
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 0.3fr));
+  grid-gap: 10px;
+}
+
+@media (min-width: 1200px) {
+  .card-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.card {
+  width: 200px;
+  border-radius: 5px;
+  /* border: 1px solid red; */
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 10px;
+  row-gap: 5px;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* margin-top: 10px; */
+}
+
+.card-buttons button {
+  border: none;
+  outline: none;
+  /* background-color: transparent; */
+  flex: 1;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-author {
+  font-size: 14px;
+  color: #777;
+}
+
+.card-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.cart-icon {
+  display: inline;
+  width: 24px;
+  height: 24px;
+}
+
+.cart-btn {
+  /* background-color: white;
+  color: black; */
+  background-color: #ea1538;
+  color: white;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-width 0.3s ease;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+
+/* Footer */
+
+footer {
+  /* text-align: center; */
+  background-color: #f0f0f0;
+  padding: 20px;
+  /* border: 1px solid red; */
+  margin-top: 8vh;
+  /* margin: 8vh 5vw; */
+}
+
+footer h1 {
+  font-size: xx-large;
+  padding-left: 3vw;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.centered {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.centered p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.links {
+  margin-top: 10px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.links ul li img {
+  width: 5vh;
+  height: 5vh;
+}
+
+.links li {
+  margin-right: 30px;
+}
+
+.links li:last-child {
+  margin-right: 0;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.links img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  footer h1 {
+    text-align: center;
+  }
+}
